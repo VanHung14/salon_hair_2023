@@ -85,7 +85,7 @@ function ServiceDetail() {
                                     src={image}
                                     alt={`Image ${index + 1}`}
                                     style={{
-                                        width: '100px',
+                                        width: '150px',
                                         height: '100px',
                                         margin: '4px',
                                         cursor: 'pointer',

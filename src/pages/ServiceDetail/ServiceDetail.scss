@@ -43,14 +43,11 @@
     }
     .right-sider-bar {
         width: 24vw;
-        height: 76vh;
         background-color: rgb(246, 109, 109);
         position: relative;
         color: #fff;
     }
     .add-cart-button {
-        position: absolute;
-        bottom: -50px;
         width: 100%;
         background-color: rgb(255, 193, 7);
         border-radius: 0px;
@@ -62,5 +59,19 @@
         &:hover {
             background-color: rgb(255, 193, 7, 0.8);
         }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .service-container {
+        display: block;
+        .service-image,
+        .list-images {
+            width: 100% !important;
+        }
+    }
+    .right-sider-bar {
+        width: auto !important;
+        height: auto !important;
     }
 }
