@@ -5,9 +5,9 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Button } from '@mui/material';
 import { Breadcrumbs } from '../Breadcrumbs';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 function ServiceDetail() {
-    const { id } = useParams();
+    const navigate = useNavigate();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -113,7 +113,16 @@ function ServiceDetail() {
                 </div>
                 <div className="right-sider-bar">
                     <div style={{ padding: '12px' }}>
-                        <h2 style={{ display: 'flex', justifyContent: 'center' }}>THÔNG TIN DỊCH VỤ</h2>
+                        <h2
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                textAlign: 'center',
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            THÔNG TIN DỊCH VỤ
+                        </h2>
                         <h3>Tên:</h3>
                         <p>CẠO MẶT ÊM ÁI - GỘI XẢ KỸ CÀNG</p>
                         <h3>Mô tả:</h3>
@@ -126,7 +135,7 @@ function ServiceDetail() {
                         <h3>Giá:</h3>
                         <p>50,000₫</p>
                     </div>
-                    <Button className="add-cart-button">
+                    <Button className="add-cart-button" onClick={() => navigate('/cart')}>
                         <AddShoppingCartIcon className="add-cart-icon" />
                     </Button>
                 </div>
