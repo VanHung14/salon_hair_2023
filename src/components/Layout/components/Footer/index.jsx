@@ -3,6 +3,8 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import classNames from 'classnames/bind';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
 import styles from './Footer.module.scss';
 const cx = classNames.bind(styles);
 function Footer() {
@@ -37,11 +39,11 @@ function Footer() {
                         {address.map((item, index) => (
                             <li key={index}>
                                 <span>
-                                    <LocationOnIcon />
+                                    <LocationOnIcon className="contact-icon" />
                                     {item.location}
                                 </span>
                                 <span>
-                                    <CallIcon />
+                                    <CallIcon className="contact-icon" />
                                     <a href={`tel: ${item.phone}`}>{item.phone}</a>
                                 </span>
                             </li>
@@ -69,9 +71,11 @@ function Footer() {
                 <div>
                     <h3>LIÊN lạc </h3>
                     <div>
-                        phone:<span>13135123</span>
+                        <MailOutlineIcon className="contact-icon" />
+                        Phone: <span>13135123</span>
                         <br></br>
-                        mail:<span>anhluong@gmail.com</span>
+                        <PhoneIcon className="contact-icon" />
+                        Mail: <span>anhluong@gmail.com</span>
                     </div>
                 </div>
             </footer>

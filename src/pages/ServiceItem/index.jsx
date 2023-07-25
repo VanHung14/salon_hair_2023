@@ -58,7 +58,10 @@ export const ServiceItem = ({ id, title, imgUrl, onClick }) => {
                 font-size: 32px !important;
               }
               &:hover {
-                background-color: rgb(255,193,7, 0.8);
+                background-color: rgb(255,193,7, 0.4);
+              }
+              &:focus {
+                outline: none
               }
             }
             @media screen and (max-width: 769px) {
