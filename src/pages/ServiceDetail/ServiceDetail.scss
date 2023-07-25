@@ -15,7 +15,9 @@
             height: 60vh;
         }
         .service-image {
-            width: 100%;
+            width: 56vw;
+            height: 56vh;
+            object-fit: fill;
             &:hover {
                 transform: scale(1.1);
                 transition: all 0.5s ease;
@@ -46,9 +48,12 @@
     .right-sider-bar {
         width: 24vw;
         height: max-content;
-        background-color: rgb(246, 109, 109);
+        background-color: #fbfbf1;
         position: relative;
-        color: #fff;
+        font-family: 'Roboto Condensed', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        h3 {
+            font-weight: bold;
+        }
     }
     .add-cart-button {
         width: 100%;
@@ -60,7 +65,7 @@
             font-size: 32px !important;
         }
         &:hover {
-            background-color: rgb(255, 193, 7, 0.8);
+            background-color: rgb(255, 193, 7, 0.4);
         }
     }
 }
