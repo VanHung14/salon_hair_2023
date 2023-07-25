@@ -5,8 +5,9 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Button } from '@mui/material';
 import { Breadcrumbs } from '../Breadcrumbs';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 function ServiceDetail() {
+    const { id } = useParams();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -61,11 +62,14 @@ function ServiceDetail() {
                     <Link className="breadcrumb-link" to="/service">
                         Các dịch vụ
                     </Link>
+                    <Link className="breadcrumb-text">CẠO MẶT ÊM ÁI - GỘI XẢ KỸ CÀNG</Link>
                 </Breadcrumbs>
             </section>
             <div className="service-container">
                 <div className="service-content">
-                    <img className="service-image" src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+                    <div className="service-content__image">
+                        <img className="service-image" src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+                    </div>
                     <div className="list-images">
                         <button className="left-button" onClick={handlePrevClick}>
                             <ArrowBackIosNewIcon />
@@ -74,9 +78,9 @@ function ServiceDetail() {
                             ref={containerRef}
                             style={{
                                 display: 'flex',
-                                justifyContent: 'center',
                                 alignItems: 'center',
                                 marginTop: '16px',
+                                overflowX: 'scroll',
                             }}
                         >
                             {images.map((image, index) => (

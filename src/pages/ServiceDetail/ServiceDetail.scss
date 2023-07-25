@@ -9,10 +9,13 @@
     justify-content: space-between;
     margin: 20px;
     .service-content {
-        overflow: hidden;
-        .service-image {
+        &__image {
+            overflow: hidden;
             width: 56vw;
             height: 60vh;
+        }
+        .service-image {
+            width: 100%;
             &:hover {
                 transform: scale(1.1);
                 transition: all 0.5s ease;
@@ -26,7 +29,6 @@
             margin-top: 20px;
             display: flex;
             width: 56vw;
-            overflow: hidden;
             position: relative;
             .left-button,
             .right-button {
@@ -43,6 +45,7 @@
     }
     .right-sider-bar {
         width: 24vw;
+        height: max-content;
         background-color: rgb(246, 109, 109);
         position: relative;
         color: #fff;
@@ -68,6 +71,10 @@
         .service-image,
         .list-images {
             width: 100% !important;
+        }
+        .service-content__image {
+            width: 100%;
+            height: auto;
         }
     }
     .right-sider-bar {
